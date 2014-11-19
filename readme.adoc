@@ -1,0 +1,5 @@
+Рельсы, рельсы, шпалы, шпалы. Вышел поезд запоздалый. Вдруг из заднего вагона высыпалось зерно.
+
+A framework for creating SPAs(single-page applications) in a quick, pleasant, and spaly way.
+
+Work in progress. An appropriate readme will be written later.

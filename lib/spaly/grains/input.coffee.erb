@@ -1,0 +1,10 @@
+$('#<%= @id %>').on 'input', (e) ->
+  input = $(@).val()
+  id    = $(@).attr 'id'
+
+  data =
+    id:    id
+    type:  e.type
+    input: input
+
+  $.post '/event', data
