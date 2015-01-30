@@ -5,6 +5,7 @@ group :runtime do
   gem 'angelo', github: 'kenichi/angelo'
   gem 'tilt', '~> 2.0.1'
   gem 'jquery', path: './gems/jquery'
+  gem 'zurb_foundation', path: './gems/zurb_foundation'
   gem 'activesupport', '~> 4.1.8'
 end
 

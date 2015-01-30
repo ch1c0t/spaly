@@ -5,7 +5,7 @@ module Spaly
     end
 
     def wrap body
-      "<!DOCTYPE html><html>#{head}<body>#{body}</body></html>"
+      "<!doctype html><html>#{head}<body>#{body}</body></html>"
     end
 
     private
@@ -16,7 +16,12 @@ module Spaly
 
     def head
       template = Tilt.new "#{__dir__}/main.coffee"
-      "<head><script>#{JQuery}#{template.render}</script></head>"
+      script   = "<script>#{JQuery}#{template.render}</script>"
+      charset  = "<meta charset='utf-8' />"
+      viewport = "<meta name='viewport' content='width=device-width, initial-scale=1.0' />"
+      style    = "<style>#{ZurbFoundation.css}</style>"
+
+      "<head>#{charset}#{viewport}#{script}#{style}</head>"
     end
   end
 

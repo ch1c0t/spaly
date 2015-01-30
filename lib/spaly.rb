@@ -4,6 +4,7 @@ require 'tilt'
 require 'tilt/erb'
 require 'tilt/coffee'
 require 'jquery'
+require 'zurb_foundation'
 
 require 'active_support'
 require 'active_support/core_ext/hash/indifferent_access'
