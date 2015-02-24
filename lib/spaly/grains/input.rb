@@ -3,6 +3,10 @@ module Spaly
     class Input
       prepend Grain
 
+      def watir_element
+        :text_field
+      end
+
       def initial_html
         "<input id='#{@id}'></input>"
       end

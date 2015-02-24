@@ -48,6 +48,8 @@ module Spaly
     include Observable
 
     @@grains = HashWithIndifferentAccess.new
+
+    attr_reader :id
     def initialize *a
       @id = a.last.delete :id
       @@grains[@id] = self
@@ -66,6 +68,10 @@ module Spaly
 
       def new_actions
         @@new_actions.tap { @@new_actions = [] }
+      end
+
+      def all
+        @@grains
       end
 
       def [] id

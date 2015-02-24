@@ -25,6 +25,7 @@ module Spaly
     end
   end
 
+  require_relative './app/spec'
   class App
     include Grains
 
@@ -35,6 +36,17 @@ module Spaly
     def run
       server = Server.new self
       server.run
+    end
+
+    def spec &block
+      if block_given?
+        @spec = Spec.new app: self, &block
+      end
+      @spec
+    end
+
+    def grains
+      Grain.all
     end
 
     class Initial

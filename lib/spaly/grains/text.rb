@@ -8,6 +8,10 @@ module Spaly
         @string = string
       end
 
+      def watir_element
+        :p
+      end
+
       def initial_html
         "<p id=#{@id}></p>"
       end
